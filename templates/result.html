@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            max-width: 400px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #007bff;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style untuk tombol kembali */
+        #kembali-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        #kembali-btn:hover {
+            background-color: #4c7ff7;
+        }
+    </style>
+</head>
+    
+<body>
+    <h1>Hasil Prediksi</h1>
+
+    <table>
+        <tr>
+            <th>Elemen</th>
+            <th>Nilai</th>
+        </tr>
+        <tr>
+            <td>Hasil Prediksi</td>
+            <td>{{ prediction }}</td>
+        </tr>
+        <tr>
+            <td>Akurasi</td>
+            <td>{{ accuracy }}</td>
+        </tr>
+    </table>
+
+    <p><a href="/" id="kembali-btn">Kembali ke Halaman Utama</a></p>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style untuk form */
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style untuk label */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        /* Style untuk input dan select */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+        }
+
+        /* Style untuk tombol submit */
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hover effect untuk tombol submit */
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        /* Animasi hover untuk input dan select */
+        input:hover, select:hover {
+            border-color: #2980b9;
+        }
+
+        /* Animasi hover untuk label */
+        label:hover {
+            color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form method="POST" action="/predict">
+        <!-- Input field untuk umur -->
+        <label for="umur">Umur:</label>
+        <input type="text" name="umur" required>
+        
+        <!-- Input field untuk jenis kelamin -->
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select name="jenis_kelamin" required>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+        
+        <!-- Input field untuk jumlah gejala (nilai k) -->
+        <label for="jumlah_gejala">Jumlah Gejala:</label>
+        <input type="number" name="jumlah_gejala" value="3" min="1" required>
+        
+        <!-- Tombol submit -->
+        <input type="submit" value="Predict">
+    </form>
+    
+    
+</body>
+</html>
